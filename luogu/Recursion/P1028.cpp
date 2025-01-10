@@ -1,19 +1,22 @@
-#include<iostream>
-#define int long long
+#include<bits/stdc++.h>
 using namespace std;
-int sum = 1;
+int num;
 
-void recursion(int n){
+void res(int n){
+
+    //cout << n << " ";
     for(int i = n/2; i >= 1; i--){
-        sum++;
-        recursion(i);
+        res(i);
     }
+    num++;
 }
-signed main(){
 
-    int n;
-    cin >> n;
-    recursion(n);
-    cout << sum << endl;
+int main(){
+    for(int i = 1; i <= 1000; i++)
+    {
+        res(i);
+        cout << num << ",";
+        num = 0;
+    }
     return 0;
 }
